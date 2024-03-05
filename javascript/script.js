@@ -4,16 +4,17 @@ const eta = prompt('Quanti anni hai?');
 
 /* VARIABILI FISSE */
 const prezzo = 0.21;
+const scontoMinorenni = 0.20;
+const scontiOver65 = 0.40;
 
-/* Calcoli */
-
+/* VARIABILI NON FISSE */
 let costoBiglietto = prezzo * kilometri;
 
 /* CONDIZIONE */
 if (eta <= 17) {
-    costoBiglietto = costoBiglietto * (20 / 100);
-} if (eta => 65) {
-    costoBiglietto = costoBiglietto * (40 / 100);
+    costoBiglietto = costoBiglietto - (costoBiglietto * scontoMinorenni);
+} if (eta >= 65) {
+    costoBiglietto = costoBiglietto - (costoBiglietto * scontiOver65);
 } 
 
 /* APPROSSIMAZIONE */
@@ -22,5 +23,5 @@ costoBiglietto = costoBiglietto.toFixed(2)
 /* OUTPUT */
 document.getElementById('kilometri').innerHTML = kilometri;
 document.getElementById('eta').innerHTML = eta;
-document.getElementById('prezzo').innerHTML = 'Il prezzo del biglietto è' + ' ' + prezzo;
+document.getElementById('prezzo').innerHTML = `${prezzo}€`;
 document.getElementById('costo-biglietto').innerHTML = costoBiglietto;
