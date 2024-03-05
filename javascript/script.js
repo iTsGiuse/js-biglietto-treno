@@ -24,4 +24,4 @@ costoBiglietto = costoBiglietto.toFixed(2)
 document.getElementById('kilometri').innerHTML = kilometri;
 document.getElementById('eta').innerHTML = eta;
 document.getElementById('prezzo').innerHTML = `${prezzo}€`;
-document.getElementById('costo-biglietto').innerHTML = costoBiglietto;
+document.getElementById('costo-biglietto').innerHTML = `${costoBiglietto}€`;

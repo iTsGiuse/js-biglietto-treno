@@ -1,0 +1,15 @@
+.ms-container{
+    height: 550px !important;
+    width: 1000px !important;
+    border: 5px solid black !important;
+    margin-top: 15% !important;
+}
+
+.ms-border-bottom{
+    border: 5px solid transparent !important;
+    border-bottom-color: black !important;
+}
+
+h1{
+    color: red !important;
+}
